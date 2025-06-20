@@ -4,6 +4,7 @@ metadata:
   name: aliviation-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+  namespace: aliviation
 spec:
   ingressClassName: nginx
   rules:

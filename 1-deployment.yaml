@@ -4,6 +4,7 @@ metadata:
   name: aliviation-deploy
   labels:
     app: aliviation-deploy
+  namespace: aliviation
 spec:
   replicas: 1
   selector:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
       - name: aliviation-deploy
-        image: 271122/ali.viation
+        image: 271122/ali.viation:latest
         ports:
         - containerPort: 80
         - containerPort: 443

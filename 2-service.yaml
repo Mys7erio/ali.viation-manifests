@@ -4,6 +4,7 @@ metadata:
   name: aliviation-service
   labels:
     app: aliviation-service
+  namespace: aliviation
 spec:
   type: ClusterIP
   selector:
