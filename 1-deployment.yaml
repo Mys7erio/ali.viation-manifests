@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aliviation-deploy
+  labels:
+    app: aliviation-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aliviation-deploy
+  template:
+    metadata:
+      labels:
+        app: aliviation-deploy
+    spec:
+      containers:
+      - name: aliviation-deploy
+        image: 271122/ali.viation
+        ports:
+        - containerPort: 80
+        - containerPort: 443
