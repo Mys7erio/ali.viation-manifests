@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tmux-redirect-ingress
+  namespace: aliviation
+  annotations:
+    nginx.ingress.kubernetes.io/permanent-redirect: https://gist.githubusercontent.com/Mys7erio/8c54af5bb128f171c4e0a77de4ccf426/raw/1ce887df258121fbd82ccc5470f726a826112f03/.tmux.conf
+
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: tmux.alvn.xyz
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: aliviation-service # Still needs a backend for API validation
+            port:
+              number: 80
