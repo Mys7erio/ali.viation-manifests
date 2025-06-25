@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: aliviation-deploy
-        image: 271122/ali.viation:60f92b1
+        image: 271122/ali.viation:d5b92d3
         ports:
         - containerPort: 80
         - containerPort: 443
