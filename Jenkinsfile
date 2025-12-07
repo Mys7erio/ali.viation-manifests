@@ -46,7 +46,7 @@ pipeline {
                     sh "git commit -m '[AUTOMATED]: Updated deployment to version: ${env.TAG}'"
                     
                     // Add github's public to known_hosts, and push
-                    sh "ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts"
+                    sh "mkdir -p ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts"
                     sh "git push git@github.com:Mys7erio/ali.viation-manifests.git"
                 }
             }
