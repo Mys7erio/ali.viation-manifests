@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'container'
+        label 'cloud || container'
     }
 
 
@@ -53,3 +53,4 @@ pipeline {
         }
     }
 }
+
